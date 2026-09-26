@@ -1,27 +1,32 @@
 <p>task-form works!</p>
-<form class="form">
+<form class="form" (ngSubmit)="onSubmit()">
   <div>
     <label for="TaskTitle">Task Title</label>
-    <input type="text" id="TaskTitle" name="TaskTitle" />
+    <input
+      type="text"
+      id="TaskTitle"
+      name="TaskTitle"
+      (input)="onTitleChanged($event.target.value)"
+    />
   </div>
 
   <div>
     <label for="Describtion">Task Describtion</label>
-    <input type="text" id="Describtion" name="Describtion" />
+    <input type="text" id="Describtion" name="Describtion" [(ngModel)]="task.Describtion" />
   </div>
 
   <div>
     <label for="Low">Low</label>
-    <input type="radio" id="Low" name="Priority" />
+    <input type="radio" id="Low" name="Priority" value="Low" [(ngModel)]="task.Priority" />
     <label for="Medium">Medium</label>
-    <input type="radio" id="Medium" name="Priority" />
+    <input type="radio" id="Medium" name="Priority" value="Medium" [(ngModel)]="task.Priority" />
     <label for="High">High</label>
-    <input type="radio" id="High" name="Priority" />
+    <input type="radio" id="High" name="Priority" value="High" [(ngModel)]="task.Priority" />
   </div>
 
   <div>
     <label for="Due">Low</label>
-    <input type="date" id="Due" name="DueDate" />
+    <input type="date" id="Due" name="DueDate" [(ngModel)]="task.DueDate" />
   </div>
 
   <div>

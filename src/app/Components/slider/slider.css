@@ -1,0 +1,56 @@
+.container {
+  padding: 20px;
+  margin: 20px;
+  border: 5px solid salmon;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider {
+  width: 78%;
+  border: 5px solid pink;
+  height: 400px;
+  padding: 10px;
+}
+
+i {
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+.slidControl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.dot {
+  display: inline-block;
+  margin-right: 7px;
+  border-radius: 50% 50%;
+  height: 10px;
+  width: 10px;
+  background-color: aqua;
+  cursor: pointer;
+}
+
+.im {
+  height: 80%;
+  border: 3px solid skyblue;
+  /* overflow: hidden; */
+  object-fit: contain;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+
+  /* height: auto; */
+  display: block; /* Prevents unwanted bottom alignment whitespace */
+  background-size: cover;
+  /* object-fit: contain; */
+}

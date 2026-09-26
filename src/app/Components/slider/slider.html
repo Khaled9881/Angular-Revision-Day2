@@ -1,1 +1,40 @@
 <h1>This is Slider.........................</h1>
+<div class="container">
+  <a (click)="Prev()"><i class="fa-solid fa-left-long"></i></a>
+  <div class="slider">
+    <div class="im">
+      <img [src]="currentImage()" alt="Slider image" />
+    </div>
+    <div class="slidControl">
+      <button type="button" (click)="onStart()">Start</button>
+      <div>
+        <button
+          type="button"
+          class="dot"
+          value="0"
+          (click)="chooseDot($any($event.target).value)"
+        ></button>
+        <button
+          type="button"
+          class="dot"
+          value="1"
+          (click)="chooseDot($any($event.target).value)"
+        ></button>
+        <button
+          type="button"
+          class="dot"
+          value="2"
+          (click)="chooseDot($any($event.target).value)"
+        ></button>
+        <button
+          type="button"
+          class="dot"
+          value="3"
+          (click)="chooseDot($any($event.target).value)"
+        ></button>
+      </div>
+      <button type="button" (click)="onstop()">Stop</button>
+    </div>
+  </div>
+  <a (click)="next()"><i class="fa-solid fa-right-long"></i></a>
+</div>
