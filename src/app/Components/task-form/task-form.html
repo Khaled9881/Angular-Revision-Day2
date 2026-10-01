@@ -15,13 +15,21 @@
     <input type="text" id="Describtion" name="Describtion" [(ngModel)]="task.Describtion" />
   </div>
 
-  <div>
-    <label for="Low">Low</label>
+  <div class="mb-4">
     <input type="radio" id="Low" name="Priority" value="Low" [(ngModel)]="task.Priority" />
-    <label for="Medium">Medium</label>
+    <label for="Low" class="me-3">Low</label>
     <input type="radio" id="Medium" name="Priority" value="Medium" [(ngModel)]="task.Priority" />
-    <label for="High">High</label>
+    <label for="Medium" class="me-3">Medium</label>
     <input type="radio" id="High" name="Priority" value="High" [(ngModel)]="task.Priority" />
+    <label for="High" class="me-3">High</label>
+  </div>
+
+  <div class="mb-4">
+    <input type="radio" id="done" name="isdone" [value]="true" [(ngModel)]="task.IsDone" />
+    <label for="done" class="me-3">done</label>
+
+    <input type="radio" id="notdone" name="isdone" [value]="false" [(ngModel)]="task.IsDone" />
+    <label for="notdone" class="me-3">Not done</label>
   </div>
 
   <div>

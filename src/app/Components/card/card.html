@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem">
+  <div
+    class="card-body"
+    [ngClass]="{ 'bg-success': CardTask.IsDone === true, 'bg-danger': CardTask.IsDone === false }"
+  >
+    <h5 class="card-title">{{ CardTask.TaskTitle }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{ CardTask.DueDate }}</h6>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{ CardTask.IsDone }}</h6>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{ CardTask.Priority }}</h6>
+    <p class="card-text">
+      {{ CardTask.Describtion }}
+    </p>
+  </div>
+</div>

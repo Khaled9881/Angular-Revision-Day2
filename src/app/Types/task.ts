@@ -3,4 +3,5 @@ export interface Task {
   Describtion: string;
   Priority: string;
   DueDate: string;
+  IsDone: boolean;
 }

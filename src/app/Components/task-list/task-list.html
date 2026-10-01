@@ -1,1 +1,17 @@
 <h1>task-list works!</h1>
+
+<button (click)="showList('all')">All Tasks</button>
+<button (click)="showList('Done')">Done</button>
+<button (click)="showList('NotDone')">Not Done</button>
+
+@for (t of importedTasks; track $index) {
+  <h1>{{ t.IsDone }}</h1>
+}
+
+@if (TasksState == 'all') {
+  <app-all-tasks-list [importedList]="importedTasks"></app-all-tasks-list>
+} @else if (TasksState == 'Done') {
+  <app-done-tasks-list [importedList]="DoneTasks"></app-done-tasks-list>
+} @else if (TasksState == 'NotDone') {
+  <app-not-done-tasks-list [importedList]="NotDoneTasks"></app-not-done-tasks-list>
+}
